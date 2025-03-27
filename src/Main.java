@@ -33,7 +33,7 @@ public class Main {
             
                 //actions they can do
                 if (userInput.equals("1")) {
-                    System.out.println("bannerrrrrrrrrrrrrrrrrrrrr");
+                    System.out.println("bannerrrrrrrrrrrrrrrrrrsssssssssssssssss");
                 } else if (userInput.equals("2")) {
                     System.out.println("gallery");
                 } else if (userInput.equals("3")) {
