@@ -10,6 +10,8 @@ public class Main {
         int forgingTideCount = 0;
         ArrayList<String> resonatorList;
 
+        int whaleCount = 3;
+
         boolean wannaQuit = false;
 
         Scanner scan = new Scanner(System.in);
@@ -19,13 +21,15 @@ public class Main {
         System.out.println("What would you like to do?");
         
         while(true) {
-            System.out.println("[1] see banners");
+            System.out.println("[1] wish");
             System.out.println("[2] see gallery");
             System.out.println("[3] check inventory");
             System.out.println("[4] whale");
 
-            String userInput = scan.nextLine();
+
             while (!wannaQuit) {
+
+            String userInput = scan.nextLine();
                 //check if they wanna quit
                 if (userInput.equals("q")) {
                     wannaQuit = true;
@@ -34,21 +38,43 @@ public class Main {
                 //actions they can do
                 if (userInput.equals("1")) {
                     System.out.println("bannerrrrrrrrrrrrrrrrrrsssssssssssssssss");
+
+                    
+                    whaleCount = 3;
                 } else if (userInput.equals("2")) {
                     System.out.println("gallery");
+
+
+                    whaleCount = 3;
                 } else if (userInput.equals("3")) {
                     System.out.println("You have:\n" + astriteCount + " astrite\n" + radiantTideCount + " radiant tides (character wishes)\n" + forgingTideCount + " forging tides (weapon wishes)");
+
+
+                    whaleCount = 3;
                 } else if (userInput.equals("4")) {
-                    System.out.print("You have " + astriteCount + " astrite.....");
-                    delay(500, "+");
-                    delay(500, "+");
-                    delay(500, "+");
+                    if (whaleCount > 0) {
+                        System.out.print("You have " + astriteCount + " astrite.....");
+                        delay(750, "  +  ");
+                        delay(750, "  +  ");
+                        delay(750, "  +  \n");
+                        astriteCount += 14400;
+                        System.out.println("You now have " + astriteCount + " astrite!");
+                        whaleCount--;
+                    } else {
+                        System.out.println("You have whaled too much. Try choosing another action!");
+                    }
+
+
                 } else {
                     System.out.println("Choose 1, 2, 3, or 4 please! If you would like to quit enter q");
                 }
 
+                System.out.println("\n--------------------------------------------\n");
                 System.out.println("What would you like to do next?");
-                userInput = scan.nextLine();
+                System.out.println("[1] wish");
+                System.out.println("[2] see gallery");
+                System.out.println("[3] check inventory");
+                System.out.println("[4] whale");
 
             }
 
@@ -64,12 +90,11 @@ public class Main {
     }
 
     public static void delay(int ms, String printz) {
-        Timer timer = new Timer();
-        timer.schedule(new TimerTask() { 
-        @Override  
-        public void run() {
-            System.out.print(printz);
+        try {
+            Thread.sleep(ms); // Pause for 5 seconds
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
-        },  ms);
+        System.out.print(printz);
     }
 }
