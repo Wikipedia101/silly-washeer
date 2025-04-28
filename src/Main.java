@@ -54,8 +54,8 @@ public class Main {
                     whaleCount = 3;
                 } else if (userInput.equals("4")) {
                     if (whaleCount > 0) {
-                        System.out.print("You have " + astriteCount + " astrite.....");
-                        delay(750, "  +  ");
+                        System.out.print("You have " + astriteCount + " astrite.....\n");
+                        delay(750, "+  ");
                         delay(750, "  +  ");
                         delay(750, "  +  \n");
                         astriteCount += 14400;
