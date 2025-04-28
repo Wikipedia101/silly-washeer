@@ -16,6 +16,7 @@ public class Main {
 
         Scanner scan = new Scanner(System.in);
 
+
         //intro
         System.out.println("Welcome to Silley Wisher! You can wish on banners to obtain characters and weapons.");
         System.out.println("What would you like to do?");

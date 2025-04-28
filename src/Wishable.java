@@ -5,6 +5,7 @@ public class Wishable {
     protected int sequence;
     protected double[] stats = new double[6];
   
+    //stat order: hp, atk, def, er, cr, cdmg
     public Wishable(String name, int level, int rarity, int sequence, double[] stats) {
       this.name = name;
       this.level = level;
