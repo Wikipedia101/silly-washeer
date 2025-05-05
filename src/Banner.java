@@ -12,6 +12,8 @@ public class Banner {
     public int pity;
     public int fourStarPity;
 
+    protected int puuCount;
+
     public Banner(Wishable sporkle, Wishable uno, Wishable dos, Wishable tres) {
         limitedOne = sporkle;
         normalOne = uno;
@@ -77,6 +79,7 @@ public class Banner {
             }
 
         }
+        puuCount++;
         return puu;
     }
 
@@ -106,6 +109,12 @@ public class Banner {
 
     public int getPity() {
         return pity;
+    }
+
+    public int getPuuCount() {
+        int temp = puuCount;
+        puuCount = 0;
+        return temp;
     }
 
 }

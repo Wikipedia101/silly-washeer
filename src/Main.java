@@ -56,8 +56,6 @@ public class Main {
 
 
         int astriteCount = 0;
-        int radiantTideCount = 0;
-        int forgingTideCount = 0;
         ArrayList<Wishable> resonatorList = new ArrayList<Wishable>();
         ArrayList<Wishable> weaponList = new ArrayList<Wishable>();
         int puuCount = 0;
@@ -98,29 +96,71 @@ public class Main {
                     Wishable fourStarWishableOne = puu;
                     Wishable fourStarWishableTwo = puu;
                     Wishable fourStarWishableThree = puu;
+                    String bannerType = "";
 
-                    System.out.println("\nWhich banner would you like to wish on?\n[1] Banner 1.0 pt 1: Jiyan\n[2] Banner 1.0 pt 2: Yinlin");
+                    System.out.println("\nWould you like to wish on a resonator (character) banner or a weapon banner?\n[1] Resonator\n[2] Weapon");
                     userInput = scan.nextLine();
 
                     while (true) {
                         if (userInput.equals("1")) {
-                            fiveStarWishable = verdantSummit;
-                            fourStarWishableOne = abyssSurges;
-                            fourStarWishableTwo = cosmicRipples;
-                            fourStarWishableThree = staticMist;
+                            bannerType = "resonator";
                             break;
                         } else if (userInput.equals("2")) {
-                            fiveStarWishable = stringmaster;
-                            fourStarWishableOne = abyssSurges;
-                            fourStarWishableTwo = cosmicRipples;
-                            fourStarWishableThree = staticMist;
+                            bannerType = "weapon";
                             break;
                         } else {
-                            System.out.println("\nPlease choose a valid banner!\n[1] Banner 1.0 pt 1: Jiyan\n[2] Banner 1.0 pt 2: Yinlin");
-                            userInput = scan.nextLine();
+                            System.out.println("Please choose 1 oe 2!");
                         }
                     }
-                    
+
+    //RESONATOR BANNERS=========================================================================================
+                    if (bannerType.equals("resonator")) {
+                        System.out.println("\nWhich banner would you like to wish on?\n[1] Banner 1.0 pt 1: Jiyan\n[2] Banner 1.0 pt 2: Yinlin");
+                        userInput = scan.nextLine();
+
+                        while (true) {
+                            if (userInput.equals("1")) {
+                                fiveStarWishable = verdantSummit;
+                                fourStarWishableOne = abyssSurges;
+                                fourStarWishableTwo = cosmicRipples;
+                                fourStarWishableThree = staticMist;
+                                break;
+                            } else if (userInput.equals("2")) {
+                                fiveStarWishable = stringmaster;
+                                fourStarWishableOne = abyssSurges;
+                                fourStarWishableTwo = cosmicRipples;
+                                fourStarWishableThree = staticMist;
+                                break;
+                            } else {
+                                System.out.println("\nPlease choose a valid banner!\n[1] Banner 1.0 pt 1: Jiyan\n[2] Banner 1.0 pt 2: Yinlin");
+                                userInput = scan.nextLine();
+                            }
+                        }
+
+    //WEAPON BANNERS=========================================================================================
+                    } else {
+                        System.out.println("\nWhich banner would you like to wish on?\n[1] Banner 1.0 pt 1: Jiyan\n[2] Banner 1.0 pt 2: Yinlin");
+                        userInput = scan.nextLine();
+    
+                        while (true) {
+                            if (userInput.equals("1")) {
+                                fiveStarWishable = verdantSummit;
+                                fourStarWishableOne = abyssSurges;
+                                fourStarWishableTwo = cosmicRipples;
+                                fourStarWishableThree = staticMist;
+                                break;
+                            } else if (userInput.equals("2")) {
+                                fiveStarWishable = stringmaster;
+                                fourStarWishableOne = abyssSurges;
+                                fourStarWishableTwo = cosmicRipples;
+                                fourStarWishableThree = staticMist;
+                                break;
+                            } else {
+                                System.out.println("\nPlease choose a valid banner!\n[1] Banner 1.0 pt 1: Jiyan\n[2] Banner 1.0 pt 2: Yinlin");
+                                userInput = scan.nextLine();
+                            }
+                        }
+                    }
 
                     currBanner = new Banner(fiveStarWishable, fourStarWishableOne, fourStarWishableTwo, fourStarWishableThree);
 
@@ -163,27 +203,29 @@ public class Main {
                                 }
                                 System.out.print("You got: ");
 
-                            int count = 0;
-                            for (Wishable x: yum) {
-                                if (x != puu) {
-                                    if (x.getClass() == emeraldOfGenesis.getClass()) {
-                                        weaponList.add(x);
-                                    } else if (x.getClass() == tempuu.getClass()) {
-                                        resonatorList.add(x);
+                                int count = 0;
+                                for (Wishable x: yum) {
+                                    if (x != puu) {
+                                        if (x.getClass() == emeraldOfGenesis.getClass()) {
+                                            weaponList.add(x);
+                                        } else if (x.getClass() == tempuu.getClass()) {
+                                            resonatorList.add(x);
+                                        }
+                                    } else {
+                                        puuCount++;
+                                        System.out.println("add");
                                     }
-                                } else {
-                                    puuCount++;
-                                }
 
-                                count++;
-                                if (count == 10) {
-                                    System.out.print("and " + x.getName());
-                                } else {
-                                    System.out.print(x.getName() + ", ");
+                                    count++;
+                                    if (count == 10) {
+                                        System.out.print("and " + x.getName());
+                                    } else {
+                                        System.out.print(x.getName() + ", ");
+                                    }
                                 }
-                            }
                             System.out.println();
                             }
+                            
                         //if they wanna exit wishing menu
                         } else if (userInput.equals("3")) {
                             break;
@@ -202,7 +244,7 @@ public class Main {
 //GALLERY================================================================================================================================
                 } else if (userInput.equals("2")) {
 
-                    System.out.println("Resonators obtained: ");
+                    System.out.println("\nResonators obtained: ");
                     if (resonatorList.size() == 0) {
                         System.out.println("[none]\nTry wishing on a resonator banner!");
                     } else {
@@ -220,12 +262,14 @@ public class Main {
                         }
                     }
 
+                    System.out.println("Your puu count is: " + puuCount);
+
                     whaleCount = 3;
                     System.out.println("\nEnter [m] to return to menu");
                     
 //INVENTORY================================================================================================================================
                 } else if (userInput.equals("3")) {
-                    System.out.println("You have:\n" + astriteCount + " astrite\n" + radiantTideCount + " radiant tides (character wishes)\n" + forgingTideCount + " forging tides (weapon wishes)");
+                    System.out.println("You have: " + astriteCount + " astrite!");
 
 
                     whaleCount = 3;
@@ -269,12 +313,6 @@ public class Main {
             }
 
         }
-        
-        //Scanner myObj = new Scanner(System.in);
-        //System.out.println("Enter username");
-
-        //String userName = myObj.nextLine();
-        //System.out.println("Username is: " + userName);
     }
 
     public static void delay(int ms, String printz) {
