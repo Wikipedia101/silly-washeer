@@ -1,8 +1,8 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
-import java.util.Timer;
-import java.util.TimerTask;
+import java.awt.Color;
+
 
 public class Main {
     public static void main(String[] args) {
@@ -13,13 +13,56 @@ public class Main {
         double[] puuStats = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0};
         Wishable puu = new Wishable("puu", 0, 3, 0, puuStats);
 
+        //COLORSSSSSSSSSSS=============
+        String five = "\u001B[33m";
+        String four = "\u001B[35m";
+        String three = "\u001B[34m";
+        String reset = "\u001B[37m";
+
 
         //RESONATORRSSSSSS========
+            double[] FiveStarChar = new double[] {750, 1500, 750, 100, 30, 200};
+            double[] FourStarChar = new double[] {600, 1000, 600, 100, 20, 150};
+
             Resonator tempuu = new Resonator("uh", 0, 0, 0, puuStats, "havoc", "sword");
+
+            Resonator Brant = new Resonator("Brant", 1, 5, 0, FiveStarChar, "Fusion", "Sword");
+            Resonator Calcharo = new Resonator("Calcharo", 1, 5, 0, FiveStarChar, "Electro", "Broadblade");
+            Resonator Camellya = new Resonator("Camellya", 1, 5, 0, FiveStarChar, "Havoc", "Sword");
+            Resonator Cantarella = new Resonator("Cantarella", 1, 5, 0, FiveStarChar, "Havoc", "Rectifier");
+            Resonator Carlotta = new Resonator("Carlotta", 1, 5, 0, FiveStarChar, "Glacio", "Pistol");
+            Resonator Changli = new Resonator("Changli", 1, 5, 0, FiveStarChar, "Fusion", "Sword");
+            Resonator Encore = new Resonator("Encore", 1, 5, 0, FiveStarChar, "Fusion", "Rectifier");
+            Resonator Jianxin = new Resonator("Jianxin", 1, 5, 0, FiveStarChar, "Aero", "Gauntlet");
+            Resonator Jinhsi = new Resonator("Jinhsi", 1, 5, 0, FiveStarChar, "Spectro", "Broadblade");
+            Resonator Jiyan = new Resonator("Jiyan", 1, 5, 0, FiveStarChar, "Aero", "Broadblade");
+            Resonator Lingyang = new Resonator("Lingyang", 1, 5, 0, FiveStarChar, "Glacio", "Gauntlet");
+            Resonator Phoebe = new Resonator("Phoebe", 1, 5, 0, FiveStarChar, "Spectro", "Rectifier");
+            Resonator Roccia = new Resonator("Roccia", 1, 5, 0, FiveStarChar, "Havoc", "Gauntlet");
+            Resonator Shorekeeper = new Resonator("Shorekeeper", 1, 5, 0, FiveStarChar, "Spectro", "Rectifier");
+            Resonator Verina = new Resonator("Verina", 1, 5, 0, FiveStarChar, "Spectro", "Rectifier");
+            Resonator XiangliYao = new Resonator("Xiangli Yao", 1, 5, 0, FiveStarChar, "Electro", "Gauntlet");
+            Resonator Yinlin = new Resonator("Yinlin", 1, 5, 0, FiveStarChar, "Electro", "Rectifier");
+            Resonator Zani = new Resonator("Zani", 1, 5, 0, FiveStarChar, "Spectro", "Gauntlet");
+            Resonator Zhezhi = new Resonator("Zhezhi", 1, 5, 0, FiveStarChar, "Glacio", "Rectifier");
+
+            // 4★ Resonators
+            Resonator Aalto = new Resonator("Aalto", 1, 4, 0, FourStarChar, "Aero", "Pistol");
+            Resonator Baizhi = new Resonator("Baizhi", 1, 4, 0, FourStarChar, "Glacio", "Rectifier");
+            Resonator Chixia = new Resonator("Chixia", 1, 4, 0, FourStarChar, "Fusion", "Pistol");
+            Resonator Danjin = new Resonator("Danjin", 1, 4, 0, FourStarChar, "Havoc", "Sword");
+            Resonator Lumi = new Resonator("Lumi", 1, 4, 0, FourStarChar, "Electro", "Broadblade");
+            Resonator Mortefi = new Resonator("Mortefi", 1, 4, 0, FourStarChar, "Fusion", "Pistol");
+            Resonator Sanhua = new Resonator("Sanhua", 1, 4, 0, FourStarChar, "Glacio", "Sword");
+            Resonator Taoqi = new Resonator("Taoqi", 1, 4, 0, FourStarChar, "Havoc", "Broadblade");
+            Resonator Yangyang = new Resonator("Yangyang", 1, 4, 0, FourStarChar, "Aero", "Sword");
+            Resonator Youhu = new Resonator("Youhu", 1, 4, 0, FourStarChar, "Glacio", "Gauntlet");
+            Resonator Yuanwu = new Resonator("Yuanwu", 1, 4, 0, FourStarChar, "Electro", "Gauntlet");
 
 
         //WEAPONSSSSSSSSSSS=======================================================================================================
             double[] FiveStarWep = {50.0, 100.0, 150.0, 200.0, 250.0, 300.0};
+            double[] FourStarWep = new double[] {100, 400, 100, 0, 15, 30};
 
             Weapon abyssSurges = new Weapon("Abyss Surges", 1, 5, 0, FiveStarWep, "N/A", "Gauntlet");
             Weapon agesOfHarvest = new Weapon("Age of Harvest", 1, 5, 0, FiveStarWep, "Jinhsi", "Broadblade");
@@ -41,6 +84,52 @@ public class Main {
             Weapon veritysHandle = new Weapon("Verity's Handle", 1, 5, 0, FiveStarWep, "Xiangli Yao", "Gauntlet");
             Weapon whispersOfSirens = new Weapon("Whispers of Sirens", 1, 5, 0, FiveStarWep, "Cantarella", "Rectifier");
             
+            //4 stars
+            Weapon broadblade41 = new Weapon("Broadblade#41", 1, 4, 0, FourStarWep, "N/A", "Broadblade");
+            Weapon waningRedshift = new Weapon("Waning Redshift", 1, 4, 0, FourStarWep, "N/A", "Broadblade");
+            Weapon meditationsOnMercy = new Weapon("Meditations on Mercy", 1, 4, 0, FourStarWep, "N/A", "Broadblade");
+            Weapon autumntrace = new Weapon("Autumntrace", 1, 4, 0, FourStarWep, "N/A", "Broadblade");
+            Weapon dauntlessEvernight = new Weapon("Dauntless Evernight", 1, 4, 0, FourStarWep, "N/A", "Broadblade");
+            Weapon discord = new Weapon("Discord", 1, 4, 0, FourStarWep, "N/A", "Broadblade");
+            Weapon heliosCleaver = new Weapon("Helios Cleaver", 1, 4, 0, FourStarWep, "N/A", "Broadblade");
+
+            Weapon gauntlets21D = new Weapon("Gauntlets#21D", 1, 4, 0, FourStarWep, "N/A", "Gauntlet");
+            Weapon legendOfDrunkenHero = new Weapon("Legend of Drunken Hero", 1, 4, 0, FourStarWep, "N/A", "Gauntlet");
+            Weapon celestialSpiral = new Weapon("Celestial Spiral", 1, 4, 0, FourStarWep, "N/A", "Gauntlet");
+            Weapon stonard = new Weapon("Stonard", 1, 4, 0, FourStarWep, "N/A", "Gauntlet");
+            Weapon marcato = new Weapon("Marcato", 1, 4, 0, FourStarWep, "N/A", "Gauntlet");
+            Weapon hollowMirage = new Weapon("Hollow Mirage", 1, 4, 0, FourStarWep, "N/A", "Gauntlet");
+            Weapon amityAccord = new Weapon("Amity Accord", 1, 4, 0, FourStarWep, "N/A", "Gauntlet");
+
+            Weapon pistols26 = new Weapon("Pistols#26", 1, 4, 0, FourStarWep, "N/A", "Pistol");
+            Weapon relativisticJet = new Weapon("Relativistic Jet", 1, 4, 0, FourStarWep, "N/A", "Pistol");
+            Weapon cadenza = new Weapon("Cadenza", 1, 4, 0, FourStarWep, "N/A", "Pistol");
+            Weapon novaburst = new Weapon("Novaburst", 1, 4, 0, FourStarWep, "N/A", "Pistol");
+            Weapon thunderbolt = new Weapon("Thunderbolt", 1, 4, 0, FourStarWep, "N/A", "Pistol");
+            Weapon undyingFlame = new Weapon("Undying Flame", 1, 4, 0, FourStarWep, "N/A", "Pistol");
+            Weapon romanceInFarewell = new Weapon("Romance in Farewell", 1, 4, 0, FourStarWep, "N/A", "Pistol");
+
+            Weapon fusionAccretion = new Weapon("Fusion Accretion", 1, 4, 0, FourStarWep, "N/A", "Rectifier");
+            Weapon waltzInMasquerade = new Weapon("Waltz in Masquerade", 1, 4, 0, FourStarWep, "N/A", "Rectifier");
+            Weapon callOfTheAbyss = new Weapon("Call of the Abyss", 1, 4, 0, FourStarWep, "N/A", "Rectifier");
+            Weapon oceansGift = new Weapon("Ocean's Gift", 1, 4, 0, FourStarWep, "N/A", "Rectifier");
+            Weapon rectifier25 = new Weapon("Rectifier#25", 1, 4, 0, FourStarWep, "N/A", "Rectifier");
+            Weapon augment = new Weapon("Augment", 1, 4, 0, FourStarWep, "N/A", "Rectifier");
+            Weapon cometFlare = new Weapon("Comet Flare", 1, 4, 0, FourStarWep, "N/A", "Rectifier");
+            Weapon jinzhouKeeper = new Weapon("Jinzhou Keeper", 1, 4, 0, FourStarWep, "N/A", "Rectifier");
+            Weapon variation = new Weapon("Variation", 1, 4, 0, FourStarWep, "N/A", "Rectifier");
+
+            Weapon endlessCollapse = new Weapon("Endless Collapse", 1, 4, 0, FourStarWep, "N/A", "Sword");
+            Weapon sword18 = new Weapon("Sword#18", 1, 4, 0, FourStarWep, "N/A", "Sword");
+            Weapon somnoireAnchor = new Weapon("Somnoire Anchor", 1, 4, 0, FourStarWep, "N/A", "Sword");
+            Weapon fablesOfWisdom = new Weapon("Fables of Wisdom", 1, 4, 0, FourStarWep, "N/A", "Sword");
+            Weapon commandoOfConviction = new Weapon("Commando of Conviction", 1, 4, 0, FourStarWep, "N/A", "Sword");
+            Weapon lumingloss = new Weapon("Lumingloss", 1, 4, 0, FourStarWep, "N/A", "Sword");
+            Weapon lunarCutter = new Weapon("Lunar Cutter", 1, 4, 0, FourStarWep, "N/A", "Sword");
+            Weapon overture = new Weapon("Overture", 1, 4, 0, FourStarWep, "N/A", "Sword");
+
+
+
             /**
              *             ArrayList<Weapon> weaponList = new ArrayList<>(Arrays.asList(
             abyssSurges, agesOfHarvest, blazingBrilliance, bloodpactsPledge, cosmicRipples,
@@ -109,7 +198,8 @@ public class Main {
                             bannerType = "weapon";
                             break;
                         } else {
-                            System.out.println("Please choose 1 oe 2!");
+                            System.out.println("Please choose 1 or 2!");
+                            userInput = scan.nextLine();
                         }
                     }
 
@@ -173,20 +263,41 @@ public class Main {
                         //if they wanna 1 pull
                         if (userInput.equals("1")) {
                             if (astriteCount >= 160) {
+                                astriteCount = astriteCount - 160;
+                                String color;
+
                                 Wishable x = currBanner.pullOne();
-                                System.out.println("You got: " + x.getName()+"\n");
-                                if (x != puu) {
+                                if (x.getRarity() == 5) {
+                                    color = five;
+                                }  else if (x.getRarity() == 4) {
+                                    color = four; 
+                                } else {
+                                    color = three;
+                                }
+                                if (!x.getName().equals("puu")) {
+                                    //if what you pulled was a weapon
                                     if (x.getClass() == emeraldOfGenesis.getClass()) {
-                                        weaponList.add(x);
+                                        if (weaponList.contains(x)) {
+                                            weaponList.get(weaponList.indexOf(x)).addSequence();
+                                        } else {
+                                           weaponList.add(x);
+                                        }
+
+                                    //if what you pulled was a resonator
                                     } else if (x.getClass() == tempuu.getClass()) {
-                                        resonatorList.add(x);
+                                        if (resonatorList.contains(x)) {
+                                            resonatorList.get(resonatorList.indexOf(x)).addSequence();
+                                        } else {
+                                           resonatorList.add(x);
+                                        }                                    
                                     }
                                 } else {
                                     puuCount++;
                                 }
-                            } else {
-                                astriteCount = astriteCount - 160;
 
+                                System.out.println("You got: " + color + x.getName() + reset + "\n");
+
+                            } else {
                                 System.out.println("You do not have enought astrite for a x1 wish! (You need 160)\nCurrent astrite count: " + astriteCount + "\nTry going back to the main menu to whale.");
                             }
                         //if they wanna 10 pull
@@ -205,22 +316,43 @@ public class Main {
 
                                 int count = 0;
                                 for (Wishable x: yum) {
-                                    if (x != puu) {
-                                        if (x.getClass() == emeraldOfGenesis.getClass()) {
-                                            weaponList.add(x);
-                                        } else if (x.getClass() == tempuu.getClass()) {
-                                            resonatorList.add(x);
-                                        }
+                                    //set color
+                                    String color;
+                                    if (x.getRarity() == 5) {
+                                        color = five;
+                                    }  else if (x.getRarity() == 4) {
+                                        color = four; 
                                     } else {
-                                        puuCount++;
-                                        System.out.println("add");
+                                        color = three;
                                     }
 
+                        //add to list/add sequence
+                                    if (!x.getName().equals("puu")) {
+                                    //if what you pulled was a weapon
+                                        if (x.getClass() == emeraldOfGenesis.getClass()) {
+                                            if (weaponList.contains(x)) {
+                                                weaponList.get(weaponList.indexOf(x)).addSequence();
+                                            } else {
+                                            weaponList.add(x);
+                                            }
+
+                                        //if what you pulled was a resonator
+                                        } else if (x.getClass() == tempuu.getClass()) {
+                                            if (resonatorList.contains(x)) {
+                                                resonatorList.get(resonatorList.indexOf(x)).addSequence();
+                                            } else {
+                                            resonatorList.add(x);
+                                            }                                    }
+                                    } else {
+                                        puuCount++;
+                                    }
+
+                                    //print out what u got
                                     count++;
                                     if (count == 10) {
-                                        System.out.print("and " + x.getName());
+                                        System.out.print("and " + color + x.getName() + reset);
                                     } else {
-                                        System.out.print(x.getName() + ", ");
+                                        System.out.print(color + x.getName() + reset + ", ");
                                     }
                                 }
                             System.out.println();

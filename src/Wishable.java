@@ -14,6 +14,10 @@ public class Wishable {
       this.stats = stats;
     }
   
+    public void addSequence() {
+      sequence++;
+    }
+
     //setters
     public void setName(String newName) {
       name = newName;
@@ -55,6 +59,7 @@ public class Wishable {
     public double[] getStats() {
       return stats;
     }
+    
 
   }
   
