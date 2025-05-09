@@ -205,21 +205,156 @@ public class Main {
 
     //RESONATOR BANNERS=========================================================================================
                     if (bannerType.equals("resonator")) {
-                        System.out.println("\nWhich banner would you like to wish on?\n[1] Banner 1.0 pt 1: Jiyan\n[2] Banner 1.0 pt 2: Yinlin");
+                        System.out.println("\nWhich banner would you like to wish on?");
+                        System.out.println("[1] Banner 1.0 pt 1: Jiyan");
+                        System.out.println("[2] Banner 1.0 pt 2: Yinlin");
+                        System.out.println("[3] Banner 1.1 pt 1: Jinhsi");
+                        System.out.println("[4] Banner 1.1 pt 2: Changli");
+                        System.out.println("[5] Banner 1.2 pt 1: Zhezhi");
+                        System.out.println("[6] Banner 1.2 pt 2: Xiangli Yao");
+                        System.out.println("[7] Banner 1.3 pt 1: Shorekeeper");
+                        System.out.println("[8] Banner 1.3 pt 2: Jiyan");
+                        System.out.println("[9] Banner 1.4 pt 1: Camellya");
+                        System.out.println("[10] Banner 1.4 pt 2: Yinlin");
+                        System.out.println("[11] Banner 1.4 pt 3: Xiangli Yao");
+                        System.out.println("[12] Banner 2.0 pt 1: Carlotta");
+                        System.out.println("[13] Banner 2.0 pt 2: Zhezhi");
+                        System.out.println("[14] Banner 2.0 pt 3: Roccia");
+                        System.out.println("[15] Banner 2.0 pt 4: Jinhsi");
+                        System.out.println("[16] Banner 2.1 pt 1: Phoebe");
+                        System.out.println("[17] Banner 2.1 pt 2: Brant");
+                        System.out.println("[18] Banner 2.1 pt 3: Changli");
+                        System.out.println("[19] Banner 2.2 pt 1: Cantarella");
+                        System.out.println("[20] Banner 2.2 pt 2: Camellya");
+                        System.out.println("[21] Banner 2.2 pt 3: Shorekeeper");
                         userInput = scan.nextLine();
 
                         while (true) {
                             if (userInput.equals("1")) {
-                                fiveStarWishable = verdantSummit;
-                                fourStarWishableOne = abyssSurges;
-                                fourStarWishableTwo = cosmicRipples;
-                                fourStarWishableThree = staticMist;
+                                fiveStarWishable = Jiyan;
+                                fourStarWishableOne = Danjin;
+                                fourStarWishableTwo = Chixia;
+                                fourStarWishableThree = Mortefi;
                                 break;
                             } else if (userInput.equals("2")) {
-                                fiveStarWishable = stringmaster;
-                                fourStarWishableOne = abyssSurges;
-                                fourStarWishableTwo = cosmicRipples;
-                                fourStarWishableThree = staticMist;
+                                fiveStarWishable = Yinlin;
+                                fourStarWishableOne = Taoqi;
+                                fourStarWishableTwo = Aalto;
+                                fourStarWishableThree = Yuanwu;
+                                break;
+                            } else if (userInput.equals("3")) {
+                                fiveStarWishable = Jinhsi;
+                                fourStarWishableOne = Yangyang;
+                                fourStarWishableTwo = Sanhua;
+                                fourStarWishableThree = Danjin;
+                                break;
+                            } else if (userInput.equals("4")) {
+                                fiveStarWishable = Changli;
+                                fourStarWishableOne = Mortefi;
+                                fourStarWishableTwo = Baizhi;
+                                fourStarWishableThree = Taoqi;
+                                break;
+                            } else if (userInput.equals("5")) {
+                                fiveStarWishable = Zhezhi;
+                                fourStarWishableOne = Chixia;
+                                fourStarWishableTwo = Sanhua;
+                                fourStarWishableThree = Baizhi;
+                                break;
+                            } else if (userInput.equals("6")) {
+                                fiveStarWishable = XiangliYao;
+                                fourStarWishableOne = Aalto;
+                                fourStarWishableTwo = Yuanwu;
+                                fourStarWishableThree = Danjin;
+                                break;
+                            } else if (userInput.equals("7")) {
+                                fiveStarWishable = Shorekeeper;
+                                fourStarWishableOne = Taoqi;
+                                fourStarWishableTwo = Yangyang;
+                                fourStarWishableThree = Chixia;
+                                break;
+                            } else if (userInput.equals("8")) {
+                                fiveStarWishable = Jiyan;
+                                fourStarWishableOne = Youhu;
+                                fourStarWishableTwo = Sanhua;
+                                fourStarWishableThree = Mortefi;
+                                break;
+                            } else if (userInput.equals("9")) {
+                                fiveStarWishable = Camellya;
+                                fourStarWishableOne = Aalto;
+                                fourStarWishableTwo = Yangyang;
+                                fourStarWishableThree = Danjin;
+                                break;
+                            } else if (userInput.equals("10")) {
+                                fiveStarWishable = Yinlin;
+                                fourStarWishableOne = Yuanwu;
+                                fourStarWishableTwo = Baizhi;
+                                fourStarWishableThree = Lumi;
+                                break;
+                            } else if (userInput.equals("11")) {
+                                fiveStarWishable = XiangliYao;
+                                fourStarWishableOne = Yuanwu;
+                                fourStarWishableTwo = Baizhi;
+                                fourStarWishableThree = Lumi;
+                                break;
+                            } else if (userInput.equals("12")) {
+                                fiveStarWishable = Carlotta;
+                                fourStarWishableOne = Chixia;
+                                fourStarWishableTwo = Mortefi;
+                                fourStarWishableThree = Sanhua;
+                                break;
+                            } else if (userInput.equals("13")) {
+                                fiveStarWishable = Zhezhi;
+                                fourStarWishableOne = Chixia;
+                                fourStarWishableTwo = Mortefi;
+                                fourStarWishableThree = Sanhua;
+                                break;
+                            } else if (userInput.equals("14")) {
+                                fiveStarWishable = Roccia;
+                                fourStarWishableOne = Yuanwu;
+                                fourStarWishableTwo = Danjin;
+                                fourStarWishableThree = Youhu;
+                                break;
+                            } else if (userInput.equals("15")) {
+                                fiveStarWishable = Jinhsi;
+                                fourStarWishableOne = Yuanwu;
+                                fourStarWishableTwo = Danjin;
+                                fourStarWishableThree = Youhu;
+                                break;
+                            } else if (userInput.equals("16")) {
+                                fiveStarWishable = Phoebe;
+                                fourStarWishableOne = Aalto;
+                                fourStarWishableTwo = Chixia;
+                                fourStarWishableThree = Lumi;
+                                break;
+                            } else if (userInput.equals("17")) {
+                                fiveStarWishable = Brant;
+                                fourStarWishableOne = Mortefi;
+                                fourStarWishableTwo = Taoqi;
+                                fourStarWishableThree = Youhu;
+                                break;
+                            } else if (userInput.equals("18")) {
+                                fiveStarWishable = Changli;
+                                fourStarWishableOne = Mortefi;
+                                fourStarWishableTwo = Taoqi;
+                                fourStarWishableThree = Youhu;
+                                break;
+                            } else if (userInput.equals("19")) {
+                                fiveStarWishable = Cantarella;
+                                fourStarWishableOne = Yuanwu;
+                                fourStarWishableTwo = Chixia;
+                                fourStarWishableThree = Danjin;
+                                break;
+                            } else if (userInput.equals("20")) {
+                                fiveStarWishable = Camellya;
+                                fourStarWishableOne = Yuanwu;
+                                fourStarWishableTwo = Chixia;
+                                fourStarWishableThree = Danjin;
+                                break;
+                            } else if (userInput.equals("21")) {
+                                fiveStarWishable = Shorekeeper;
+                                fourStarWishableOne = Aalto;
+                                fourStarWishableTwo = Sanhua;
+                                fourStarWishableThree = Baizhi;
                                 break;
                             } else {
                                 System.out.println("\nPlease choose a valid banner!\n[1] Banner 1.0 pt 1: Jiyan\n[2] Banner 1.0 pt 2: Yinlin");
