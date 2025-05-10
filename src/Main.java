@@ -357,7 +357,29 @@ public class Main {
                                 fourStarWishableThree = Baizhi;
                                 break;
                             } else {
-                                System.out.println("\nPlease choose a valid banner!\n[1] Banner 1.0 pt 1: Jiyan\n[2] Banner 1.0 pt 2: Yinlin");
+                                System.out.println("\nPlease choose a valid banner!");
+                                System.out.println("\nWhich banner would you like to wish on?");
+                                System.out.println("[1] Banner 1.0 pt 1: Jiyan");
+                                System.out.println("[2] Banner 1.0 pt 2: Yinlin");
+                                System.out.println("[3] Banner 1.1 pt 1: Jinhsi");
+                                System.out.println("[4] Banner 1.1 pt 2: Changli");
+                                System.out.println("[5] Banner 1.2 pt 1: Zhezhi");
+                                System.out.println("[6] Banner 1.2 pt 2: Xiangli Yao");
+                                System.out.println("[7] Banner 1.3 pt 1: Shorekeeper");
+                                System.out.println("[8] Banner 1.3 pt 2: Jiyan");
+                                System.out.println("[9] Banner 1.4 pt 1: Camellya");
+                                System.out.println("[10] Banner 1.4 pt 2: Yinlin");
+                                System.out.println("[11] Banner 1.4 pt 3: Xiangli Yao");
+                                System.out.println("[12] Banner 2.0 pt 1: Carlotta");
+                                System.out.println("[13] Banner 2.0 pt 2: Zhezhi");
+                                System.out.println("[14] Banner 2.0 pt 3: Roccia");
+                                System.out.println("[15] Banner 2.0 pt 4: Jinhsi");
+                                System.out.println("[16] Banner 2.1 pt 1: Phoebe");
+                                System.out.println("[17] Banner 2.1 pt 2: Brant");
+                                System.out.println("[18] Banner 2.1 pt 3: Changli");
+                                System.out.println("[19] Banner 2.2 pt 1: Cantarella");
+                                System.out.println("[20] Banner 2.2 pt 2: Camellya");
+                                System.out.println("[21] Banner 2.2 pt 3: Shorekeeper");
                                 userInput = scan.nextLine();
                             }
                         }
@@ -381,7 +403,8 @@ public class Main {
                                 fourStarWishableThree = staticMist;
                                 break;
                             } else {
-                                System.out.println("\nPlease choose a valid banner!\n[1] Banner 1.0 pt 1: Jiyan\n[2] Banner 1.0 pt 2: Yinlin");
+                                System.out.println("\nPlease choose a valid banner!");
+
                                 userInput = scan.nextLine();
                             }
                         }
