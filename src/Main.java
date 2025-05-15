@@ -589,6 +589,8 @@ public class Main {
                     System.out.println("[2] see gallery");
                     System.out.println("[3] check inventory");
                     System.out.println("[4] whale");
+                } else if (wannaQuit) {
+                    // do not show anything else
                 } else {
                     System.out.println("Choose 1, 2, 3, 4, or m please! If you would like to quit enter q");
                 }
@@ -596,10 +598,16 @@ public class Main {
 
             }
 
-            String userInput = scan.nextLine();
+            
             System.out.println("Are you sure you want to quit? All progress will be lost.\n[1] yes\n[2] no\n");
+            String userInput = scan.nextLine();
             if (userInput.equals("1")) {
                 erase = true;
+            } else if (userInput.equals("2")) {
+                wannaQuit = false;
+            } else {
+                System.out.println("Please choose 1 oe 2!");
+                userInput = scan.nextLine();
             }
 
         }
