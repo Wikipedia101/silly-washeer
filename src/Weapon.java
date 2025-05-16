@@ -20,7 +20,9 @@ public String getWeaponType(){
     return weaponType;
 }
 
-
+public void setWeaponType(String h) {
+    weaponType = h;
+}
 
 
 }

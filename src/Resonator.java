@@ -8,12 +8,12 @@ public class Resonator extends Wishable{
     String three = "\u001B[34m";
     String reset = "\u001B[37m";
 
-    String havoc = "\u001b[35m";
-    String aero = "\u001b[32m";
-    String spectro = "\u001b[33m";
-    String glacio = "\u001b[36m";
-    String fusion = "\u001b[31m";
-    String electro = "\u001b[35;1m";
+    String havoc = "\u001b[38;5;52m";
+    String aero = "\u001b[38;5;43m";
+    String spectro = "\u001b[38;5;226m";
+    String glacio = "\u001b[38;5;87m";
+    String fusion = "\u001b[38;5;202m";
+    String electro = "\u001b[38;5;91m";
 
 
     public Resonator(String name, int level, int rarity, int sequence, double[] stats, String element, String weaponType) {
@@ -52,8 +52,8 @@ public class Resonator extends Wishable{
 
         result += rareColor + "Name: " + name + " - Rarity: " + rarity + reset;
         result += ("\n" + eleColor + "element: " + element + reset);
-        result += ("\nsequence(copies obtained excluding original): " + sequence);
-        result += ("\nweapon type: " + weaponType);
+        result += ("\nSequence(copies obtained excluding original): " + sequence);
+        result += ("\nWeapon type: " + weaponType);
         result += ("\nStats: ");
         result += ("\n  HP: " + stats[0]);
         result += ("\n  ATK: " + stats[1]);
